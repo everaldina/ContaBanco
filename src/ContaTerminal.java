@@ -1,6 +1,7 @@
 // desafio: https://github.com/digitalinnovationone/trilha-java-basico/tree/main/desafios/sintaxe
 
 import java.text.DecimalFormat;
+import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -16,8 +17,14 @@ public class ContaTerminal {
         Locale localeBr = new Locale("pt", "BR");
         Scanner scanner = new Scanner(System.in).useLocale(localeBr);
 
-        System.out.print("Digite o número da conta: ");
-        numero = scanner.nextInt();
+        try{
+            System.out.print("Digite o número da conta: ");
+            numero = scanner.nextInt();
+        }catch(InputMismatchException e){
+            System.out.println("Número de conta inválido, tente novamente.");
+            scanner.close();
+            return;
+        }
         scanner.nextLine(); // limpar buffer
 
         System.out.print("Digite a agência: ");
@@ -26,8 +33,14 @@ public class ContaTerminal {
         System.out.print("Digite o nome do cliente: ");
         nomeCliente = scanner.nextLine();
 
-        System.out.print("Digite o saldo da conta: ");
-        saldo = scanner.nextFloat();
+        try{
+            System.out.print("Digite o saldo da conta: ");
+            saldo = scanner.nextFloat();
+        }catch(InputMismatchException e){
+            System.out.println("Saldo inválido, tente novamente.");
+            scanner.close();
+            return;
+        }
 
         mensagemSaida = criarMensagemSaida(numero, agencia, nomeCliente, saldo);
         System.out.print("\n" + mensagemSaida);
