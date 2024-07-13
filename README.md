@@ -1,18 +1,7 @@
-## Getting Started
+# Desafio sintaxe java
+Desafio realizado na plataforma DIO para o bootcamp "Santander 2024 - Backend com Java" com o objetivo de praticar a sintaxe da linguagem Java.
+O desafio consiste em implementar um codigo ContaTerminal que captara os dados de um terminal de banco e exibirá os dados da conta.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-## Folder Structure
+**Link do desafio**: https://github.com/digitalinnovationone/trilha-java-basico/tree/main/desafios/sintaxe
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
